@@ -10,7 +10,6 @@ public class Parseur {
 
 	public static void main(String[] args) {
 		
-		 generateur();
 		 
 		 
 		   
@@ -86,95 +85,6 @@ public class Parseur {
 		System.out.println(Result.size());
 		return Result;
 	}
-	public static void generateur() {
-		FileWriter fileWriter;
-		try {
-			fileWriter = new FileWriter("OVNI.csv",true);
-			String leString;
-			double random;
-			for(int i=0;i<100;i++){
-				
-			
-			leString = "";
-			random = Math.random();
-			if(random<0.30){
-				leString+="USA;";
-				random = Math.random();
-				if(random<0.5){
-					leString+="Soucoupe;";
-				}else if(random<0.75){
-					leString+="Triangle;";
-				}else{
-					leString+="Globe;";
-				}
-				
-				random = (int)(Math.random() * (27-1)) + 1;
-				leString+=(int)random+"/";
-				random = (int)(Math.random() * (12-1)) + 1;
-				leString+=(int)random+"/";
-				random = (int)(Math.random() * (+2010-1960)) + 1960;
-				leString+=(int)random+"\n";
-			}else if(random<0.5){
-				leString+="Belgique;";
-				random = Math.random();
-				if(random<0.5){
-					leString+="Triangle;";
-				}else if(random<0.75){
-					leString+="Soucoupe;";
-				}else{
-					leString+="Globe;";
-				}
-				
-				random = (int)(Math.random() * (27-1)) + 1;
-				leString+=(int)random+"/";
-				random = (int)(Math.random() * (12-1)) + 1;
-				leString+=(int)random+"/";
-				random = (int)(Math.random() * (+2010-1960)) + 1960;
-				leString+=(int)random+"\n";
-			}else if(random<0.75){
-				leString+="France;";
-				random = Math.random();
-				if(random<0.5){
-					leString+="Soucoupe;";
-				}else if(random<0.75){
-					leString+="Triangle;";
-				}else{
-					leString+="Globe;";
-				}
-				
-				random = (int)(Math.random() * (27-1)) + 1;
-				leString+=(int)random+"/";
-				random = (int)(Math.random() * (12-1)) + 1;
-				leString+=(int)random+"/";
-				random = (int)(Math.random() * (+2010-1960)) + 1960;
-				leString+=(int)random+"\n";
-			}else{
-				leString+="Bresil;";
-				random = Math.random();
-				if(random<0.5){
-					leString+="Globe;";
-				}else if(random<0.75){
-					leString+="Triangle;";
-				}else{
-					leString+="Soucoupe;";
-				}
-				
-				random = (int)(Math.random() * (27-1)) + 1;
-				leString+=(int)random+"/";
-				random = (int)(Math.random() * (12-1)) + 1;
-				leString+=(int)random+"/";
-				random = (int)(Math.random() * (+2010-1960)) + 1960;
-				leString+=(int)random+"\n";
-			}
-			fileWriter.append(leString);
-			}
-			fileWriter.close();
-			
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-	}
+	
 
 }
